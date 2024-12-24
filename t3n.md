@@ -1,9 +1,13 @@
 # T3N 
 1. Make Sure to have 
-- OP SEPH 
-- ARB SEPH 
-- BRN SEPH
+- 10 OP Sepolia 
+- 10 ARB Sepolia 
+- 10 BASE Sepolia
+- 0.1 Blast Sepolia
+
+1st: Run Command 
 
 ```
-wget -O t3n.sh https://raw.githubusercontent.com/0xtnpxsgt/randomnodes/refs/heads/main/t3n.sh && sed -i 's/\r$//' t3n.sh && chmod +x t3n.sh && ./t3n.sh
+wget -O t3rn.sh https://raw.githubusercontent.com/0xtnpxsgt/randomnodes/refs/heads/main/t3rn.sh && sed -i 's/\r$//' t3rn.sh && chmod +x t3rn.sh && ./t3rn.sh
 ```
+

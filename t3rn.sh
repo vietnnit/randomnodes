@@ -69,6 +69,7 @@ function restart_node() {
     export LOG_LEVEL=debug
     export LOG_PRETTY=false
     export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn'
+    export RPC_ENDPOINTS_L1RN='https://brn.rpc.caldera.xyz/'
     export EXECUTOR_MAX_L3_GAS_PRICE=100
 
     # New environment variables

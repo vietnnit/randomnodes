@@ -68,8 +68,7 @@ function restart_node() {
     export NODE_ENV=testnet
     export LOG_LEVEL=debug
     export LOG_PRETTY=false
-    export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn'
-    export RPC_ENDPOINTS_L1RN='https://brn.rpc.caldera.xyz/'
+	export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
     export EXECUTOR_MAX_L3_GAS_PRICE=100
 
     # New environment variables
@@ -134,7 +133,9 @@ function execute_script() {
     export NODE_ENV=testnet
     export LOG_LEVEL=debug
     export LOG_PRETTY=false
-    export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn'
+    export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
+	export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
+	export EXECUTOR_MAX_L3_GAS_PRICE=100
 
     # New environment variables
     export EXECUTOR_PROCESS_ORDERS=true
@@ -148,7 +149,7 @@ function execute_script() {
 
     # Delete compressed files
     echo "Delete compressed file..."
-    rm executor-linux-v0.31.0.tar.gz
+    rm executor-linux-v0.29.0.tar.gz
 
     # Change directory and execute the script
     echo "Change directory and execute ./executor..."

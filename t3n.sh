@@ -97,8 +97,8 @@ function restart_node() {
 # Execute script function
 function execute_script() {
     # Download the file
-    echo "Downloading executor-linux-v0.29.0.tar.gz..."
-    wget https://github.com/t3rn/executor-release/releases/download/v0.29.0/executor-linux-v0.31.0.tar.gz
+    echo "Downloading executor-linux-v0.31.0.tar.gz..."
+    wget https://github.com/t3rn/executor-release/releases/download/v0.29.0/executor-linux-v0.31.0.tar.gz 
 
     # Check if the download was successful
     if [ $? -eq 0 ]; then

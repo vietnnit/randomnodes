@@ -110,7 +110,7 @@ function execute_script() {
 
     # Unzip the file to the current directory
     echo "Unzipping files..."
-    tar -xvzf executor-linux-v0.31.0.tar.gz
+    tar -xzvf executor-linux-v0.31.0.tar.gz
 
     # Check if the decompression is successful
     if [ $? -eq 0 ]; then

@@ -38,4 +38,4 @@ sudo systemctl enable iniminer
 sudo systemctl start iniminer
 
 echo "INI Miner is now running!"
-echo "To check logs, use: journalctl -u iniminer -f"
+echo "To check logs, use: sudo journalctl -u iniminer -f -o cat"

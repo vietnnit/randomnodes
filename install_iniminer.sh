@@ -23,7 +23,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/root
-ExecStart=/root/iniminer-linux-x64 --pool $POOL_URL --cpu-devices 1 --cpu-devices 2 --cpu-devices 3
+ExecStart=/root/iniminer-linux-x64 --pool $POOL_URL --cpu-devices 1 --cpu-devices 2
 Restart=always
 RestartSec=10
 

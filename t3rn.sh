@@ -68,7 +68,8 @@ function restart_node() {
     export NODE_ENV=testnet
     export LOG_LEVEL=debug
     export LOG_PRETTY=false
-	export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
+    export RPC_ENDPOINTS_L1RN='https://brn.rpc.caldera.xyz/'
+    export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
     export EXECUTOR_MAX_L3_GAS_PRICE=100
 
     # New environment variables
@@ -134,8 +135,9 @@ function execute_script() {
     export LOG_LEVEL=debug
     export LOG_PRETTY=false
     export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn'
-	export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
-	export EXECUTOR_MAX_L3_GAS_PRICE=100
+    export RPC_ENDPOINTS_L1RN='https://brn.rpc.caldera.xyz/'
+    export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false
+    export EXECUTOR_MAX_L3_GAS_PRICE=100
 
     # New environment variables
     export EXECUTOR_PROCESS_ORDERS=true

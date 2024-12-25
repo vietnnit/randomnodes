@@ -8,6 +8,7 @@
 1st: Run Command 
 
 ```
+rm -rf t3rn.sh
 wget -O t3rn.sh https://raw.githubusercontent.com/0xtnpxsgt/randomnodes/refs/heads/main/t3rn.sh && sed -i 's/\r$//' t3rn.sh && chmod +x t3rn.sh && ./t3rn.sh
 ```
 

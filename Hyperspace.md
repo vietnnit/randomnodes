@@ -21,7 +21,7 @@ docker container exec -it aios /bin/bash
 
 ### Step:5 Update Docker Ubuntu dan Install HyperSpace
 ```
-cd && apt update && apt upgrade && apt install curl tmux -y
+cd && apt update && apt upgrade && apt install curl screen -y
 curl https://download.hyper.space/api/install | bash
 source /root/.bashrc
 ```

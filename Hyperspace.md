@@ -1,62 +1,62 @@
 ## Run HyperSpace on VPS
 
-Install Docker if it is not there, if it is there you can skip it.
+### Step:1 Install Docker if it is not there, if it is there you can skip it.
 ```
 apt install docker.io -y
 ```
-Pull Docker Image
+### Step:2 Pull Docker Image
 ```
 docker pull ubuntu:22.04
 ```
-Run Docker Container
+### Step:3 Run Docker Container
 ```
 docker run -it --name aios ubuntu:22.04
 exit
 docker container start aios
 ```
-Enter the Container
+### Step:4 Enter the Container
 ```
 docker container exec -it aios /bin/bash
 ```
 
-Update Docker Ubuntu dan Install HyperSpace
+### Step:5 Update Docker Ubuntu dan Install HyperSpace
 ```
 cd && apt update && apt upgrade && apt install curl tmux -y
 curl https://download.hyper.space/api/install | bash
 source /root/.bashrc
 ```
-Create Screen
+### Step:6 Create Screen
 ```
 screen -S aios
 ```
-Start aios
+### Step:7 Start aios
 ```
 aios-cli start
 ```
 After running, CTRL + A then D
 
-Login
+### Step:8 Login
 ```
 aios-cli hive login
 ```
-Select Tier
+### Step:9 Select Tier
 ```
 aios-cli hive select-tier 5
 ```
-Add Models
+### Step:10 Add Models
 ```
 aios-cli models add hf:TheBloke/phi-2-GGUF:phi-2.Q4_K_M.gguf
 ```
-Backup Pubkey + Privkey
+### Step:11 Backup Pubkey + Privkey
 ```
 aios-cli hive whoami
 ```
-Connect aios
+### Step:12 Connect aios
 ```
 aios-cli hive connect
 ```
 
-Check Points
+- Check Points
 ```
 aios-cli hive points
 ```

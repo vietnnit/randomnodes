@@ -60,4 +60,6 @@ aios-cli hive connect
 ```
 aios-cli hive points
 ```
+- CTRL + A then D to exit docker 
+
 Done, Buy me Coffee!

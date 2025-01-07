@@ -47,8 +47,8 @@ function main_menu() {
 # Execute script function
 function execute_script() {
     # Download the file
-    echo "Downloading executor-linux-v0.32.0.tar.gz..."
-    wget https://github.com/t3rn/executor-release/releases/download/v0.32.0/executor-linux-v0.32.0.tar.gz
+    echo "Downloading executor-linux-v0.33.0.tar.gz..."
+    wget https://github.com/t3rn/executor-release/releases/download/v0.33.0/executor-linux-v0.33.0.tar.gz
 
     # Check if the download was successful
     if [ $? -eq 0 ]; then
@@ -60,14 +60,14 @@ function execute_script() {
 
     # Unzip the file to the current directory
     echo "Unzipping files..."
-    tar -xvzf executor-linux-v0.32.0.tar.gz
+    tar -xvzf executor-linux-v0.33.0.tar.gz
 
     # Check if the decompression is successful
     if [ $? -eq 0 ]; then
         echo "Decompression successful."
     else
         echo "Unzip failed, please check the tar.gz file."
-        rm executor-linux-v0.32.0.tar.gz
+        rm executor-linux-v0.33.0.tar.gz
         exit 1
     fi
 

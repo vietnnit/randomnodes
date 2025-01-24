@@ -47,8 +47,8 @@ function main_menu() {
 # Execute script function
 function execute_script() {
     # Download the file
-    echo "Downloading executor-linux-v0.46.0.tar.gz..."
-    wget https://github.com/t3rn/executor-release/releases/download/v0.46.0/executor-linux-v0.46.0.tar.gz
+    echo "Downloading executor-linux-v0.47.0.tar.gz..."
+    wget https://github.com/t3rn/executor-release/releases/download/v0.47.0/executor-linux-v0.47.0.tar.gz
 
     # Check if the download was successful
     if [ $? -eq 0 ]; then
@@ -60,14 +60,14 @@ function execute_script() {
 
     # Unzip the file to the current directory
     echo "Unzipping files..."
-    tar -xvzf executor-linux-v0.46.0.tar.gz
+    tar -xvzf executor-linux-v0.47.0.tar.gz
 
     # Check if the decompression is successful
     if [ $? -eq 0 ]; then
         echo "Decompression successful."
     else
         echo "Unzip failed, please check the tar.gz file."
-        rm executor-linux-v0.46.0.tar.gz
+        rm executor-linux-v0.47.0.tar.gz
         exit 1
     fi
 
@@ -85,10 +85,6 @@ function execute_script() {
     read -p "Enter RPC_ENDPOINTS_BSSP: " RPC_ENDPOINTS_BSSP
     read -p "Enter RPC_ENDPOINTS_OPSP: " RPC_ENDPOINTS_OPSP
     read -p "Enter RPC_ENDPOINTS_BLSS: " RPC_ENDPOINTS_BLSS
-    read -p "Enter EXECUTOR_MAX_L3_GAS_PRICE (default: 100): " EXECUTOR_MAX_L3_GAS_PRICE
-
-    # Set default value if EXECUTOR_MAX_L3_GAS_PRICE is empty
-    EXECUTOR_MAX_L3_GAS_PRICE="${EXECUTOR_MAX_L3_GAS_PRICE:-100}"
 
     # Prompt the user to enter a private key
     read -p "Please enter the value of PRIVATE_KEY_LOCAL: " PRIVATE_KEY_LOCAL
@@ -111,7 +107,9 @@ function execute_script() {
     Environment="RPC_ENDPOINTS_BLSS=$RPC_ENDPOINTS_BLSS"
     Environment="RPC_ENDPOINTS_OPSP=$RPC_ENDPOINTS_OPSP"
     Environment="EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false"
-    Environment="EXECUTOR_MAX_L3_GAS_PRICE=$EXECUTOR_MAX_L3_GAS_PRICE"
+    Environment="EXECUTOR_PROCESS_ORDERS_API_ENABLED=false"
+    Environment="EXECUTOR_ENABLE_BATCH_BIDING=true"
+    Environment="EXECUTOR_PROCESS_BIDS_ENABLED=true"
     Environment="EXECUTOR_PROCESS_ORDERS=true"
     Environment="EXECUTOR_PROCESS_CLAIMS=true"
     Environment="PRIVATE_KEY_LOCAL=$PRIVATE_KEY_LOCAL"

@@ -7,7 +7,7 @@ read -p "Enter your wallet address: " WALLET_ADDRESS
 read -p "Enter your worker name: " WORKER_NAME
 
 # Define pool URL
-POOL_URL="stratum+tcp://${WALLET_ADDRESS}.${WORKER_NAME}@pool-core-testnet.inichain.com:32672"
+POOL_URL="stratum+tcp://${WALLET_ADDRESS}.${WORKER_NAME}@pool-b.yatespool.com:32488"
 
 echo "Downloading INI Miner..."
 wget -q https://github.com/Project-InitVerse/ini-miner/releases/download/v1.0.0/iniminer-linux-x64
@@ -23,7 +23,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/root
-ExecStart=/root/iniminer-linux-x64 --pool $POOL_URL --cpu-devices 1 --cpu-devices 2
+ExecStart=/root/iniminer-linux-x64 --pool $POOL_URL --cpu-devices 1 --cpu-devices 2 --cpu-devices 3 --cpu-devices 4 --cpu-devices 5 --cpu-devices 6
 Restart=always
 RestartSec=10
 

@@ -1,5 +1,6 @@
 # VLAYER TESTNET
 
+# 1. VLAYER TESTNET
 - Update Vlayer Test simple-web-proof 
 - VPS Ubuntu 24.04 Contabo
 
@@ -62,11 +63,19 @@ bun add @vlayer/sdk
 ```
 bun run prove:testnet
 ```
+Detached SCREEN 
+
 
 - FULL VIDEO GUIDE:  https://www.youtube.com/watch?v=-Jpcg7NJFdU
 -------------------------------------------------------------------
 
-# VLAYER DEVNET DOCKER
+# 2. VLAYER DEVNET DOCKER
+
+Create Screen 
+```
+screen -S devnet
+```
+
 ```
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common

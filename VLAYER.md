@@ -1,132 +1,116 @@
-# VLAYER TESTNET
+# 🚀 **VLAYER TESTNET & DEVNET SETUP GUIDE**  
 
-# 1. VLAYER TESTNET
-- Update Vlayer Test simple-web-proof 
-- VPS Ubuntu 24.04 Contabo
+## 🛠 **VLAYER TESTNET**  
+### ✅ **Update Vlayer Test: simple-web-proof**  
+**VPS:** Ubuntu 24.04 (Contabo)  
 
-- 1st: Run Command 
+### 🔹 **Step 1: Update & Install Dependencies**  
+Run the following command:  
+```bash
+sudo apt update && sudo apt install -y git curl wget unzip tar build-essential
 ```
-sudo apt update && apt install git
-sudo apt install -y curl wget unzip tar build-essential
-```
-- 2nd: Run Command 
-```
+
+### 🔹 **Step 2: Install Foundry**  
+```bash
 curl -L https://foundry.paradigm.xyz | bash
 source /root/.bashrc
 foundryup
 forge --version
 ```
-- 3rd: Run Command 
-```
+
+### 🔹 **Step 3: Install Vlayer**  
+```bash
 curl -SL https://install.vlayer.xyz | bash
 source /root/.bashrc
 vlayerup
 vlayer --version
 ```
-- 4th: Run Command 
-```
+
+### 🔹 **Step 4: Install Bun**  
+```bash
 curl -fsSL https://bun.sh/install | bash
 source /root/.bashrc
 ```
-- 5th: Run Command 
-```
+
+### 🔹 **Step 5: Install Viem & Project Setup**  
+```bash
 bun add viem
 rm -rf bun.lockb node_modules
 bun install
 ```
-- Create Project ( Change name of project )
-```
+
+### 📌 **Create a New Project** (Change `YOUR-PROJECT-NAME`)  
+```bash
 vlayer init YOUR-PROJECT-NAME --template simple-web-proof
 cd YOUR-PROJECT-NAME
 forge build
 ```
-- Create a screen 
-```
+
+### 📌 **Run Inside a Screen Session**  
+```bash
 screen -S vlayer
-```
-```
-cd vlayer 
+cd vlayer
 nano .env.testnet.local
 ```
-- Edit Your Api Key and Paste in inside .env file.
-```
-VLAYER_API_TOKEN=APIKEY VLAYER
+**Edit and Add Your API Key:**  
+```env
+VLAYER_API_TOKEN=APIKEY_VLAYER
 EXAMPLES_TEST_PRIVATE_KEY=0xYOUR-PRIVATE-KEY
 CHAIN_NAME=optimismSepolia
 JSON_RPC_URL=https://sepolia.optimism.io
 ```
-- Install sdk vlayer
-```
+
+### 🔹 **Install Vlayer SDK & Run Prover**  
+```bash
 bun add @vlayer/sdk
-```
-- Run
-```
 bun run prove:testnet
 ```
-- Detached SCREEN 
 
+### ✅ **Detached Screen:**  
+Press `CTRL + A + D` to exit the screen session.  
 
-- FULL VIDEO GUIDE:  https://www.youtube.com/watch?v=-Jpcg7NJFdU
--------------------------------------------------------------------
+---
 
-# 2. VLAYER DEVNET DOCKER
+## 🛠 **VLAYER DEVNET (Docker Setup)**  
 
-Create Screen 
-```
+### 📌 **Create a Screen Session**  
+```bash
 screen -S devnet
 ```
 
-```
+### 🔹 **Update System & Install Dependencies**  
+```bash
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-- Install Docker:
-```
+### 🔹 **Install Docker**  
+```bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 sudo apt install docker-ce
 ```
 
-- Install Docker Compose:
-```
+### 🔹 **Install Docker Compose**  
+```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | jq -r .tag_name)/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-- RUN Devnet Node vlayer:
-```
- bun run devnet
-```
-```
+### 🔹 **Run Devnet Node**  
+```bash
+bun run devnet
 bun run prove:dev
-```
-```
 bun run deploy:dev
 bun run deploy:testnet
 ```
-- Check Docker Status
-```
+
+### ✅ **Check Docker Status**  
+```bash
 docker ps
-
 ```
-- DONE!
 
+🎉 **DONE! Your Vlayer Testnet & Devnet are set up successfully!** 🚀  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---

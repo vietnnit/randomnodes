@@ -2,7 +2,7 @@
 
 To run the monad.sh script from the GitHub link you provided, follow these steps:
 
-Step 1: Download the Script
+# Step 1: Download the Script
 
 ```
 wget https://raw.githubusercontent.com/0xtnpxsgt/randomnodes/refs/heads/main/monad.sh

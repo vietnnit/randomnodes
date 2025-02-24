@@ -27,6 +27,8 @@ chmod +x monad.sh
 ./monad.sh
 ```
 ## Step 5: Follow the Instructions
-- The script will start running and provide interactive prompts or outputs. Follow the instructions in the terminal to complete the setup, such as setting your private key or confirming other steps.
+- The script will start running and provide interactive prompts or outputs. 
+- Follow the instructions in the terminal to complete the setup
+- Such as setting your private key or confirming other steps.
 
 Let me know if you run into any issues during the process!

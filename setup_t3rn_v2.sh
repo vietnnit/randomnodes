@@ -81,14 +81,14 @@ function execute_script() {
 
     # Extract files to the current directory
     echo "Extracting files..."
-    tar -xzf executor-linux-*.tar.gz
+    LATEST_FILE=$(ls executor-linux-*.tar.gz | sort -V | tail -n 1)
 
-    # Check if extraction was successful
-    if [ $? -eq 0 ]; then
-        echo "Extraction successful."
+    if [ -f "$LATEST_FILE" ]; then
+    tar -xzf "$LATEST_FILE"
+    echo "Extraction successful."
     else
-        echo "Extraction failed. Please check the tar.gz file."
-        exit 1
+    echo "Extraction failed. No valid tar.gz file found."
+    exit 1
     fi
 
     # Check if the extracted files contain 'executor'

@@ -110,10 +110,11 @@ function execute_script() {
     export LOG_PRETTY=false
     export ENABLED_NETWORKS='arbitrum-sepolia,base-sepolia,unichain-sepolia,optimism-sepolia,l2rn'
     export EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=true
-    export EXECUTOR_PROCESS_ORDERS_API_ENABLED=true
+    export EXECUTOR_PROCESS_ORDERS_API_ENABLED=false
     export EXECUTOR_MAX_L3_GAS_PRICE="$EXECUTOR_MAX_L3_GAS_PRICE"
 
     # Additional environment variables
+    export EXECUTOR_ENABLE_BATCH_BIDING=true
     export EXECUTOR_PROCESS_BIDS_ENABLED=true
     export EXECUTOR_PROCESS_ORDERS_ENABLED=true
     export EXECUTOR_PROCESS_CLAIMS_ENABLED=true

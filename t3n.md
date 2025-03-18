@@ -8,7 +8,7 @@
 1st: Run Command 
 
 ```
-rm -rf t3rnV47.sh
-wget -O t3rnV47.sh https://raw.githubusercontent.com/0xtnpxsgt/randomnodes/refs/heads/main/t3rnV47.sh && sed -i 's/\r$//' t3rnV47.sh && chmod +x t3rnV47.sh && ./t3rnV47.sh
+rm -rf setup_t3rn_v2.sh
+wget -O setup_t3rn_v2.sh https://raw.githubusercontent.com/0xtnpxsgt/randomnodes/refs/heads/main/setup_t3rn_v2.sh && sed -i 's/\r$//' setup_t3rn_v2.sh && chmod +x setup_t3rn_v2.sh && ./setup_t3rn_v2.sh
 ```
 

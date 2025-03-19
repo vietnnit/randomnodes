@@ -47,8 +47,8 @@ function main_menu() {
 # Execute script function
 function execute_script() {
     # Download the file
-    echo "Downloading executor-linux-v0.47.0.tar.gz..."
-    wget https://github.com/t3rn/executor-release/releases/download/v0.47.0/executor-linux-v0.47.0.tar.gz
+    echo "Downloading executor-linux-v0.54.0.tar.gz..."
+    wget https://github.com/t3rn/executor-release/releases/download/v0.54.0/executor-linux-v0.54.0.tar.gz
 
     # Check if the download was successful
     if [ $? -eq 0 ]; then
@@ -60,14 +60,14 @@ function execute_script() {
 
     # Unzip the file to the current directory
     echo "Unzipping files..."
-    tar -xvzf executor-linux-v0.47.0.tar.gz
+    tar -xvzf executor-linux-v0.54.0.tar.gz
 
     # Check if the decompression is successful
     if [ $? -eq 0 ]; then
         echo "Decompression successful."
     else
         echo "Unzip failed, please check the tar.gz file."
-        rm executor-linux-v0.47.0.tar.gz
+        rm executor-linux-v0.54.0.tar.gz
         exit 1
     fi
 
@@ -81,10 +81,11 @@ function execute_script() {
     fi
 
     # Prompt the user to enter RPC values
-    read -p "Enter RPC_ENDPOINTS_ARBT: " RPC_ENDPOINTS_ARBT
-    read -p "Enter RPC_ENDPOINTS_BSSP: " RPC_ENDPOINTS_BSSP
-    read -p "Enter RPC_ENDPOINTS_OPSP: " RPC_ENDPOINTS_OPSP
-    read -p "Enter RPC_ENDPOINTS_BLSS: " RPC_ENDPOINTS_BLSS
+    read -p "Enter RPC_ENDPOINTS_arbt: " RPC_ENDPOINTS_arbt
+    read -p "Enter RPC_ENDPOINTS_bast: " RPC_ENDPOINTS_bast
+    read -p "Enter RPC_ENDPOINTS_opst: " RPC_ENDPOINTS_opst
+    read -p "Enter RPC_ENDPOINTS_l2rn: " RPC_ENDPOINTS_l2rn
+    read -p "Enter RPC_ENDPOINTS_unit: " RPC_ENDPOINTS_unit
 
     # Prompt the user to enter a private key
     read -p "Please enter the value of PRIVATE_KEY_LOCAL: " PRIVATE_KEY_LOCAL
@@ -100,12 +101,13 @@ function execute_script() {
     Environment="NODE_ENV=testnet"
     Environment="LOG_LEVEL=debug"
     Environment="LOG_PRETTY=false"
-    Environment="ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,blast-sepolia,optimism-sepolia,l1rn"
+    Environment="ENABLED_NETWORKS=arbitrum-sepolia,base-sepolia,optimism-sepolia,l2rn"
     Environment="RPC_ENDPOINTS_L1RN=https://brn.calderarpc.com/"
-    Environment="RPC_ENDPOINTS_ARBT=$RPC_ENDPOINTS_ARBT"
-    Environment="RPC_ENDPOINTS_BSSP=$RPC_ENDPOINTS_BSSP"
-    Environment="RPC_ENDPOINTS_BLSS=$RPC_ENDPOINTS_BLSS"
-    Environment="RPC_ENDPOINTS_OPSP=$RPC_ENDPOINTS_OPSP"
+    Environment="RPC_ENDPOINTS_ARBT=$RPC_ENDPOINTS_arbt"
+    Environment="RPC_ENDPOINTS_BSSP=$RPC_ENDPOINTS_bast"
+    Environment="RPC_ENDPOINTS_OPSP=$RPC_ENDPOINTS_opst"
+    Environment="RPC_ENDPOINTS_OPSP=$RPC_ENDPOINTS_l2rn"
+    Environment="RPC_ENDPOINTS_OPSP=$RPC_ENDPOINTS_unit"
     Environment="EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API=false"
     Environment="EXECUTOR_PROCESS_ORDERS_API_ENABLED=false"
     Environment="EXECUTOR_ENABLE_BATCH_BIDING=true"

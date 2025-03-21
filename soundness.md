@@ -1,12 +1,12 @@
 # Soundness Waitlist 
 
- 🪂 Register: https://soundness.xyz
-➖ Submit your Email
-➖ Generate your Key with this Code 
-➖ Save your Phrase and Public Key
-➖ Join Discord then Verify 
-➖ Enter your Public Key on #testnet-access
-➖ Done
+- Register: [https://soundness.xyz](https://soundness.xyz)
+- Submit your Email
+- Generate your Key with this Code 
+- Save your Phrase and Public Key
+- Join [Discord](https://discord.gg/tEVXGDf6RR) then Verify 
+- Enter your Public Key on #testnet-access
+- Done
 
 
 # Step by Step Guide

@@ -1,14 +1,45 @@
-# T3N 
-1. Make Sure to have 
-- 10 OP Sepolia 
-- 10 ARB Sepolia 
-- 10 BASE Sepolia
-- 0.1 Blast Sepolia
+# Soundness Waitlist 
 
-1st: Run Command 
+ 🪂 Register: https://soundness.xyz
+➖ Submit your Email
+➖ Generate your Key with this Code 
+➖ Save your Phrase and Public Key
+➖ Join Discord then Verify 
+➖ Enter your Public Key on #testnet-access
+➖ Done
 
+
+# Step by Step Guide
+
+```bash
+sudo apt update && sudo apt upgrade -y
 ```
-rm -rf setup_t3rn_v2.sh
-wget -O setup_t3rn_v2.sh https://raw.githubusercontent.com/0xtnpxsgt/randomnodes/refs/heads/main/setup_t3rn_v2.sh && sed -i 's/\r$//' setup_t3rn_v2.sh && chmod +x setup_t3rn_v2.sh && ./setup_t3rn_v2.sh
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-
+```
+source $HOME/.cargo/env
+```
+```
+rustc --version
+cargo --version
+```
+```
+echo 'source $HOME/.cargo/env' >> ~/.bashrc
+```
+```
+source ~/.bashrc
+```
+```
+curl -sSL https://raw.githubusercontent.com/soundnesslabs/soundness-layer/main/soundnessup/install | bash
+```
+```
+source ~/.bashrc
+```
+```
+soundnessup install
+soundnessup update
+```
+```
+soundness-cli generate-key --name my-key
+```

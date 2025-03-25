@@ -11,9 +11,9 @@
  
 ### 🔹 **Step 1: Download and Run the Installer**  
 ```bash
-wget https://raw.githubusercontent.com/iqblq/ritual-infernet-node/main/install-ritual-node.sh
-chmod +x install-ritual-node.sh
-./install-ritual-node.sh
+wget https://raw.githubusercontent.com/0xtnpxsgt/randomnodes/refs/heads/main/ritual-node.sh
+chmod +x ritual-node.sh
+./ritual-node.sh
 ```
 
 ### 🔹 **Step 2: Enter Required Information** 

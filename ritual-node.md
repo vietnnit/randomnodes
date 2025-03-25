@@ -12,7 +12,7 @@ chmod +x install-ritual-node.sh
 ./install-ritual-node.sh
 ```
 
-### 🔹 **Step 2. Enter Required Information*  
+### 🔹 **Step 2: Enter Required Information** 
 - During the installation, you will be prompted to enter:
 ```bash
 Wallet Address

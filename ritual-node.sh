@@ -92,7 +92,12 @@ echo "[6] Installing Foundry..."
 cd
 mkdir -p foundry && cd foundry
 curl -L https://foundry.paradigm.xyz | bash
-source ~/.bashrc
+
+# Ensure Foundry binaries are available
+export PATH=$HOME/.foundry/bin:$PATH
+echo 'export PATH=$HOME/.foundry/bin:$PATH' >> ~/.bashrc
+
+# Run foundryup to install Foundry tools
 foundryup
 
 # 7. Install Library for Smart Contract

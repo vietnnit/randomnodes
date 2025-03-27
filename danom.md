@@ -4,9 +4,7 @@
 
 ![image](https://github.com/user-attachments/assets/009ccea5-d7c3-48b2-bf9a-e32433c23113)
 
-## 🛠 **DANOM NODE**  
-### ✅ **Follow This Steps First**   
-
+## 🛠 **Follow This Steps First**  
 - Create Account : https://huggingface.co/join
 - Verify Email
 - Go To Profile

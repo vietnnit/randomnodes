@@ -1,4 +1,4 @@
-# 🚀 **DANOM SETUP GUIDE**  
+# 🚀 **DANOM WORKER NODE**  
 - What is Danom ?
 - Danom is a revolutionary project designed to simplify AI adoption for businesses, developers, and enthusiasts by offering powerful pre-trained AI models that can be accessed effortlessly through APIs. By leveraging the Hugging Face API, users no longer need to worry about training models, managing AI infrastructure, or dealing with complex machine-learning frameworks. Instead, they can focus on innovation, creativity, and problem-solving, using AI as an easily accessible tool.
 

@@ -28,7 +28,7 @@ cd Danom
 curl -fsSL 'https://testnet.danom.site/install.sh' | bash
 ```
 
-### 🔹 **Step 4: Replace Wallet and API **  
+### 🔹 **Step 4: Replace Wallet and API**  
 - 0xYOUR_WALLET_ADDRESS = Wallet Address with 0x
 - YOUR_POOL_LIST = API huggingface 
 

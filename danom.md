@@ -3,13 +3,13 @@
 ## 🛠 **DANOM NODE**  
 ### ✅ **Follow This Steps First**   
 
-➖ Create Account : https://huggingface.co/join
-➖ Verify Email
-➖ Go To Profile
-➖ Setting > Access Token
-➖ Click + Create New Token
-➖ Create Name > Create Token
-➖ Copy API ( Will use if it for later)
+- Create Account : https://huggingface.co/join
+- Verify Email
+- Go To Profile
+- Setting > Access Token
+- Click + Create New Token
+- Create Name > Create Token
+- Copy API ( Will use if it for later)
 
 ### 🔹 **Step 1: Update & Install Dependencies**  
 Run the following command:  

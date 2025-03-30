@@ -205,12 +205,12 @@ Requires=docker.service
 
 [Service]
 Type=simple
-User=root
-ExecStart=/bin/bash /root/ritual-service.sh
+User=$USER
+ExecStart=/bin/bash /$USER/ritual-service.sh
 Restart=always
 RestartSec=30
-StandardOutput=append:/root/ritual-service.log
-StandardError=append:/root/ritual-service.log
+StandardOutput=append:/$USER/ritual-service.log
+StandardError=append:/$USER/ritual-service.log
 
 [Install]
 WantedBy=multi-user.target

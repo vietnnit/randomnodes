@@ -54,33 +54,7 @@ install_ritual() {
   
   echo "Installing dependencies..."
   
-  # Update packages & build tools
-  sudo apt update && sudo apt upgrade -y
-  sudo apt -qy install curl git jq lz4 build-essential screen
-  
-  # Install Docker
-  echo "Installing Docker..."
-  sudo apt-get update
-  sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-  echo \
-    "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-  sudo apt-get update
-  sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-  sudo docker run hello-world
-  
-  # Install Docker Compose
-  echo "Installing Docker Compose..."
-  sudo curl -L "https://github.com/docker/compose/releases/download/v2.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-  sudo chmod +x /usr/local/bin/docker-compose
-  DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
-  mkdir -p $DOCKER_CONFIG/cli-plugins
-  curl -SL https://github.com/docker/compose/releases/download/v2.20.2/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
-  chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
-  docker compose version
-  sudo usermod -aG docker $USER
-  docker run hello-world
+ 
   
   # Clone Repository
   echo "Cloning repository..."
@@ -234,12 +208,12 @@ Requires=docker.service
 
 [Service]
 Type=simple
-User=root
-ExecStart=/bin/bash /root/ritual-service.sh
+User=$USER
+ExecStart=/bin/bash /$USER/ritual-service.sh
 Restart=always
 RestartSec=30
-StandardOutput=append:/root/ritual-service.log
-StandardError=append:/root/ritual-service.log
+StandardOutput=append:/$USER/ritual-service.log
+StandardError=append:/$USER/ritual-service.log
 
 [Install]
 WantedBy=multi-user.target

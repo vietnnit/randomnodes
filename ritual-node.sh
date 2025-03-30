@@ -51,10 +51,7 @@ install_ritual() {
     private_key="0x$private_key"
     echo "Added 0x prefix to private key"
   fi
-  
-  echo "Installing dependencies..."
-  
- 
+
   
   # Clone Repository
   echo "Cloning repository..."
@@ -208,12 +205,12 @@ Requires=docker.service
 
 [Service]
 Type=simple
-User=$USER
-ExecStart=/bin/bash /$USER/ritual-service.sh
+User=root
+ExecStart=/bin/bash /root/ritual-service.sh
 Restart=always
 RestartSec=30
-StandardOutput=append:/$USER/ritual-service.log
-StandardError=append:/$USER/ritual-service.log
+StandardOutput=append:/root/ritual-service.log
+StandardError=append:/root/ritual-service.log
 
 [Install]
 WantedBy=multi-user.target
